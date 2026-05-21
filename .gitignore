@@ -21,3 +21,4 @@ build/
 
 # Docker (optionnel)
 .dockerignore
+Dockerfile
