@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YCloud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h1>☁ YCloud</h1>
+        <button onclick="goBack()">Parent</button>
+        <button onclick="uploadFile()">Upload</button>
+        <button onclick="newFolder()">Nouveau dossier</button>
+        <input type="file" id="fileInput" hidden>
+    </div>
+
+    <div class="main">
+
+        <div class="topbar">
+            <input type="text" placeholder="Recherche...">
+        </div>
+
+        <div class="files" id="files">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

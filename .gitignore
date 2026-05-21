@@ -1,0 +1,23 @@
+# dépendances Node
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# environnement
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# build (si tu ajoutes du frontend plus tard)
+dist/
+build/
+
+# Docker (optionnel)
+.dockerignore
