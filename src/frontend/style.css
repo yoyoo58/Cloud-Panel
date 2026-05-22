@@ -248,3 +248,65 @@ body
         flex: 1;
     }
 }
+.deleteBtn
+{
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #ff3b3b;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+.deleteBtn:hover
+{
+    background: #ff1f1f;
+
+    transform: scale(1.05);
+}
+
+.deleteBtn:active
+{
+    transform: scale(0.95);
+}
+
+#path
+{
+    padding: 10px 20px;
+
+    font-size: 14px;
+
+    color: #8b949e;
+
+    display: flex;
+    gap: 6px;
+
+    align-items: center;
+}
+
+#path span
+{
+    cursor: pointer;
+
+    color: #58a6ff;
+}
+
+#path span:hover
+{
+    text-decoration: underline;
+}

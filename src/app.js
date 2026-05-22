@@ -120,17 +120,29 @@ app.delete("/api/delete/:name", (req, res) =>
     }
 });
 
-app.post("/api/folder", (req, res) => {
+app.post("/api/folder", (req, res) =>
+{
     const name = req.body.name;
+    const reqPath = req.body.path || "";
 
-    if (!name) {
-        return res.status(400).json({ error: "nom manquant" });
+    if (!name)
+    {
+        return res.status(400).json({
+            error: "nom manquant"
+        });
     }
 
-    const folderPath = path.join(STORAGE, name);
+    const safePath = path
+        .normalize(reqPath)
+        .replace(/^(\.\.(\/|\\|$))+/, "");
 
-    if (fs.existsSync(folderPath)) {
-        return res.status(400).json({ error: "dossier existe déjà" });
+    const folderPath = path.join(STORAGE, safePath, name);
+
+    if (fs.existsSync(folderPath))
+    {
+        return res.status(400).json({
+            error: "dossier existe déjà"
+        });
     }
 
     fs.mkdirSync(folderPath, { recursive: true });
