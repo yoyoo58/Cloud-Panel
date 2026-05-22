@@ -22,3 +22,5 @@ build/
 # Docker (optionnel)
 .dockerignore
 Dockerfile
+
+src/storage/*
