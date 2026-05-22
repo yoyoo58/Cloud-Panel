@@ -9,7 +9,7 @@ const app = express();
 const PORT = 3000;
 const FRONTEND = path.join(__dirname, "./frontend");
 const ICON = path.join(__dirname, "./frontend/favicon.ico");
-const STORAGE = path.join(__dirname, "./storage");
+const STORAGE = path.join(__dirname, "../storage");
 
 if (!fs.existsSync(STORAGE)) {
     fs.mkdirSync(STORAGE, { recursive: true });
